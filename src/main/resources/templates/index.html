@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Unitool</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Welcome to Unitool! You can convert different units and many more!</h1>
+    <p>Just choose unit you want to convert and then click <b>Convert</b> button to convert your unit.</p>
+    <h2>Random number generator</h2>
+    <p>Please, give range (you can generate random number from 0 to 2 147 483 647). <i>Warning:</i><b> You
+    cannot give negative numbers! Only positive!</b></p>
+    <form action="#" th:action="@{/index}" th:object="${data}" method="post">
+        <table>
+            <tr>
+                <td>Range from:</td>
+                <td><input type="text" th:field="*{rangeFrom}" /></td>
+            </tr>
+            <tr>
+                <td>Range to:</td>
+                <td><input type="text" th:field="*{rangeTo}" /></td>
+            </tr>
+            <tr>
+                <td><button type="submit">Generate</button></td>
+            </tr>
+        </table>
+    </form>
+    <p th:text="'Generated number: ' + ${randomNumber}"></p>
+</body>
+</html>
