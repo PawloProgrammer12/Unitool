@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<h1>Temperature converter</h1>
+<p>Please, give a value.</p>
+<form action="#" th:action="@{/currencyConverter}" th:object="${currencyConverter}" method="post">
+    <table>
+        <tr>
+            <td>Euro:</td>
+            <td><input type="text" th:field="*{euro}"/></td>
+            <td th:if="${#fields.hasErrors('euro')}" th:errors="*{euro}" th:style="'color:red'"></td>
+        </tr>
+        <td>
+            <input type="submit" value="Convert"/>
+        </td>
+    </table>
+</form>
+<p>Dollar:</p>
+<div>
+        <textarea class="form-control" rows="1"
+                  style="margin-top: 10px;" placeholder="Generated currency..."
+                  th:inline="text" readonly="true">[[${dollar}]]
+        </textarea>
+</div>
+</body>
+</html>

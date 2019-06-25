@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Random number generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<h1>Random number generator</h1>
+<p>Please, give range (you can generate random number from -2 147 483 648 to 2 147 483 647). <i>Warning:</i><b> You
+    cannot give numbers higher than from range!</b></p>
+<form action="#" th:action="@{/randomGenerator}" th:object="${randomGenerator}" method="post">
+   <table>
+       <tr>
+           <td>Range from:</td>
+           <td><input type="text" th:field="*{rangeFrom}"/></td>
+           <td th:if="${#fields.hasErrors('rangeFrom')}" th:errors="*{rangeFrom}" th:style="'color:red'"></td>
+       </tr>
+       <tr>
+           <td>Range to:</td>
+           <td><input type="text" th:field="*{rangeTo}"/></td>
+           <td th:if="${#fields.hasErrors('rangeTo')}" th:errors="*{rangeTo}" th:style="'color:red'"></td>
+       </tr>
+       <tr>
+           <td>
+               <input type="submit" value="Generate"/>
+           </td>
+       </tr>
+   </table>
+</form>
+<p>Generated number:</p>
+    <div>
+        <textarea class="form-control" rows="1"
+              style="margin-top: 10px;" placeholder="Generated number..."
+              th:inline="text" readonly="true">[[${randomNumber}]]
+        </textarea>
+    </div>
+</body>
+</html>

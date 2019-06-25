@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Unitool</title>
@@ -7,25 +7,11 @@
 </head>
 <body>
     <h1>Welcome to Unitool! You can convert different units and many more!</h1>
-    <p>Just choose unit you want to convert and then click <b>Convert</b> button to convert your unit.</p>
-    <h2>Random number generator</h2>
-    <p>Please, give range (you can generate random number from 0 to 2 147 483 647). <i>Warning:</i><b> You
-    cannot give negative numbers! Only positive!</b></p>
-    <form action="#" th:action="@{/index}" th:object="${data}" method="post">
-        <table>
-            <tr>
-                <td>Range from:</td>
-                <td><input type="text" th:field="*{rangeFrom}" /></td>
-            </tr>
-            <tr>
-                <td>Range to:</td>
-                <td><input type="text" th:field="*{rangeTo}" /></td>
-            </tr>
-            <tr>
-                <td><button type="submit">Generate</button></td>
-            </tr>
-        </table>
-    </form>
-    <p th:text="'Generated number: ' + ${randomNumber}"></p>
+    <p>Just choose link you are interested in and let's calculate!</p>
+    <ul>
+        <li><a th:href="@{/randomGenerator}">Random number generator</a></li>
+        <li><a th:href="@{/temperatureConverter}">Temperature converter</a></li>
+        <li><a th:href="@{/currencyConverter}">Currency converter</a></li>
+    </ul>
 </body>
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<h1>Temperature converter</h1>
+<p>Please, give a value.</p>
+<form action="#" th:action="@{/temperatureConverter}" th:object="${temperatureConverter}" method="post">
+    <table>
+        <tr>
+            <td>Celsius:</td>
+                <td><input type="text" th:field="*{celsius}"/></td>
+            <td th:if="${#fields.hasErrors('celsius')}" th:errors="*{celsius}" th:style="'color:red'"></td>
+        </tr>
+        <td>
+            <input type="submit" value="Convert"/>
+        </td>
+    </table>
+</form>
+<p>Fahrenheit:</p>
+<div>
+        <textarea class="form-control" rows="1"
+                  style="margin-top: 10px;" placeholder="Generated temperature..."
+                  th:inline="text" readonly="true">[[${fahrenheit}]]
+        </textarea>
+</div>
+</body>
+</html>
