@@ -12,6 +12,8 @@ This project is a simple convertion tool created with Spring Boot as first resul
 is planned at the moment. It was just a simple excersise.
 
 Below example showing how temperature converter works:
+
+
 ![Temperature Converter Example](./images/conv.png)
 
 ## Technologies
