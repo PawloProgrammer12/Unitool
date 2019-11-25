@@ -1,6 +1,6 @@
 # Unitool
 
-Simple converting tool made with Spring Boot
+Simple convertion tool made with Spring Boot
 
 ## Table of Contents
 * [General info](#general-info)
@@ -8,7 +8,7 @@ Simple converting tool made with Spring Boot
 * [Setup](#setup)
 
 ## General info
-This project is a simple converting tool created with Spring Boot as first result learning Spring framework. No further development 
+This project is a simple convertion tool created with Spring Boot as first result learning Spring framework. No further development 
 is planned at the moment. It was just a simple excersise.
 
 ## Technologies
