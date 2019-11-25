@@ -1,6 +1,6 @@
 # Unitool
 
-Simple convertion tool made with Spring Boot
+Simple convertion tool made with Spring Boot.
 
 ## Table of Contents
 * [General info](#general-info)
