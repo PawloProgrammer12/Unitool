@@ -16,8 +16,8 @@ Below example showing how temperature converter works:
 ![Temperature Converter Example](./images/conv.png)
 
 ## Technologies
-* Spring Boot
-* Bootstrap
+* Spring Boot version 2.1.4.RELEASE
+* Bootstrap version 4.3.1
 
 ## Setup
 Unzip project in In IntelliJ IDEA's default directory (IdeaProjects). Open it with IDE and then hit 'Run'.
