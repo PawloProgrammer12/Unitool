@@ -1,13 +1,11 @@
 # Unitool
 
-Simple convertion tool made with Spring Boot.
+## What's new?
 
-## Table of Contents
-* [General info](#general-info)
-* [Technologies](#technologies)
-* [Setup](#setup)
+There is no new features.
 
-## General info
+## About project
+
 This project is a simple convertion tool created with Spring Boot as first result learning Spring framework. No further development 
 is planned at the moment. It was just a simple excersise.
 
@@ -15,9 +13,17 @@ Below example showing how temperature converter works:
 
 ![Temperature Converter Example](./images/conv.png)
 
-## Technologies
+## Technologies used in the project
+
 * Spring Boot version: 2.1.4.RELEASE
 * Bootstrap version: 4.3.1
 
-## Setup
-Unzip project in In IntelliJ IDEA's default directory (IdeaProjects). Open it with IDE and then hit 'Run'.
+## Goals
+
+Like I mentioned before, this app is created only for educational purposes.
+
+## License 
+
+My project is under BSD-2-Clause license. You can use some parts from my code but remember to credit me as an appreciation to my work! Thanks! Awoo!
+
+© 2022 Paweł "Wilczeq/Vlk" Turoń
